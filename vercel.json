@@ -17,5 +17,5 @@
             "dest": "vercelTest/wsgi.py"
         }
     ],
-    "buildCommand": "bash build_files.sh"
+    "buildCommand": "bash vercel_build.sh"
 }
