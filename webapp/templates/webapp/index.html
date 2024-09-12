@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="{% static 'webapp/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Meu Projeto Django!</h1>
+        <form method="POST" action=".">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Seu Nome">
+            <input type="email" name="email" placeholder="Seu Email">
+            <button type="submit">Enviar</button>
+        </form>
+        <p>{% if message %} {{ message }} {% endif %}</p>
+    </div>
+</body>
+</html>
